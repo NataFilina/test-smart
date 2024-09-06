@@ -22,10 +22,10 @@ const UserTable = () => {
         return selectorFilteredName.map(({ id, name, username, email, phone }) => {
           return (
             <tr key={id} className={css.item}>
-              <td>{name}</td>
-              <td>{username}</td>
-              <td>{email}</td>
-              <td>{phone}</td>
+              <td className={css.tableLine}>{name}</td>
+              <td className={css.tableLine}>{username}</td>
+              <td className={css.tableLine}>{email}</td>
+              <td className={css.tableLine}>{phone}</td>
             </tr>
           );
         });
@@ -34,10 +34,10 @@ const UserTable = () => {
         return selectorFilteredUserName.map(({ id, name, username, email, phone }) => {
           return (
             <tr key={id} className={css.item}>
-              <td>{name}</td>
-              <td>{username}</td>
-              <td>{email}</td>
-              <td>{phone}</td>
+              <td className={css.tableLine}>{name}</td>
+              <td className={css.tableLine}>{username}</td>
+              <td className={css.tableLine}>{email}</td>
+              <td className={css.tableLine}>{phone}</td>
             </tr>
           );
         });
@@ -46,10 +46,10 @@ const UserTable = () => {
         return selectorFilteredEmail.map(({ id, name, username, email, phone }) => {
           return (
             <tr key={id} className={css.item}>
-              <td>{name}</td>
-              <td>{username}</td>
-              <td>{email}</td>
-              <td>{phone}</td>
+              <td className={css.tableLine}>{name}</td>
+              <td className={css.tableLine}>{username}</td>
+              <td className={css.tableLine}>{email}</td>
+              <td className={css.tableLine}>{phone}</td>
             </tr>
           );
         });
@@ -58,10 +58,10 @@ const UserTable = () => {
         return selectorFilteredPhone.map(({ id, name, username, email, phone }) => {
           return (
             <tr key={id} className={css.item}>
-              <td>{name}</td>
-              <td>{username}</td>
-              <td>{email}</td>
-              <td>{phone}</td>
+              <td className={css.tableLine}>{name}</td>
+              <td className={css.tableLine}>{username}</td>
+              <td className={css.tableLine}>{email}</td>
+              <td className={css.tableLine}>{phone}</td>
             </tr>
           );
       });
@@ -70,10 +70,10 @@ const UserTable = () => {
         return selectorUsers.map(({ id, name, username, email, phone }) => {
           return (
             <tr key={id} className={css.item}>
-              <td>{ name}</td>
-              <td>{ username}</td>
-              <td>{email}</td>
-              <td>{phone}</td>
+              <td className={css.tableLine}>{ name}</td>
+              <td className={css.tableLine}>{ username}</td>
+              <td className={css.tableLine}>{email}</td>
+              <td className={css.tableLine}>{phone}</td>
             </tr>
           );
         });
@@ -87,13 +87,13 @@ const UserTable = () => {
 
 
   return (
-    <table className={css.list}>
+    <table className={css.table}>
       <thead>
         <tr>
-          <th scope="col" name="Name">Name </th>
-          <th scope="col" name="Username">Username</th>
-          <th scope="col" name="Email">Email</th>
-          <th scope="col" nmae="Phone">Phone</th>
+          <th scope="col" className={css.tableLine}>Name </th>
+          <th scope="col" className={css.tableLine}>Username</th>
+          <th scope="col" className={css.tableLine}>Email</th>
+          <th scope="col" className={css.tableLine}>Phone</th>
         </tr>
       </thead>
       <Filter />

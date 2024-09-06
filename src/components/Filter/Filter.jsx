@@ -1,5 +1,5 @@
 import React from 'react';
-// import css from './Filter.module.css';
+import css from './Filter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectorFilterName, selectorFilterUserName, selectorFilterEmail, selectorFilterPhone } from '../../app/selectors'
 import { filterActionName,
@@ -27,57 +27,46 @@ const Filter = () => {
     };
     const changeFilterPhone = event => {
     dispatch(filterActionPhone(event.target.value));
-  };
-  const cleanInput = event => {
-    
-    dispatch(filterActionName(event.target.value = ''));
-    dispatch(filterActionUserName(event.target.value = ''));
-    dispatch(filterActionEmail(event.target.value = ''));
-    dispatch(filterActionPhone(event.target.value = ''));
-    
-    };
-  
+  }; 
   
     return (
       <tr>
-        <th scope="col" name="Name" >
+        <th className={css.tableLine} scope="col" name="Name" >
           Find user by name
-                <input
-        type="text"
-        value={filterName}
-            onChange={changeFilterName}
-            onBlur={cleanInput}
+          <input
+            className={css.input}
+          type="text"
+          value={filterName}
+          onChange={changeFilterName}
           />
         </th>
-        <th scope="col" name="Username">
+        <th className={css.tableLine} scope="col" name="Username">
           Find user by userName
           <input
-    
-        type="text"
-        value={filterUserName}
-            onChange={changeFilterUserName}
-            onBlur={cleanInput}
+          className={css.input}
+          type="text"
+          value={filterUserName}
+          onChange={changeFilterUserName}
           />
         </th>
-        <th scope="col" name="Email">
+        <th className={css.tableLine} scope="col" name="Email">
           Find user by email
           <input
-    
-        type="text"
-        value={filterEmail}
-            onChange={changeFilterEmail}
-            onBlur={cleanInput}
+          className={css.input}
+          type="text"
+          value={filterEmail}
+          onChange={changeFilterEmail}
           />
         </th>
-        <th scope="col" name="Phone">
+        <th className={css.tableLine} scope="col" name="Phone">
           Find user by phone
           <input
-    
-        type="text"
-        value={filterPhone}
-            onChange={changeFilterPhone}
-            onBlur={cleanInput}
-      /> </th>
+          className={css.input}
+          type="text"
+          value={filterPhone}
+          onChange={changeFilterPhone}
+          />
+        </th>
     </tr>
 
   );
